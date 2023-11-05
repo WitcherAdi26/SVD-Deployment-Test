@@ -1,0 +1,21 @@
+{
+    "functions": { "python": "3.8" },
+    
+    "builds": [
+        {
+            "src": "api/main.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb", 
+                "pip": ["--use-pep517"]
+            }
+        }
+    ],
+    
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "api/main.py"
+        }
+    ]
+}
