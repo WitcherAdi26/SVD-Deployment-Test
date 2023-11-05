@@ -1,6 +1,4 @@
-{    
-    "functions": { "python": "3.11.4" },
-    
+{       
     "builds": [
         {
             "src": "api/main.py",
